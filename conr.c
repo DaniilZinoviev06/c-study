@@ -8,10 +8,17 @@ int main() {
             putchar('\\');
             putchar('t');
         }
-        else if (c == '\r') {
+        else if (c == '\b' || c == 127) {
             putchar('\\');
             putchar('b');
-        };
+        }
+        else if (c == '/') {
+            putchar('\\');
+            putchar('\\');
+        }
+        else {
+            putchar(c);
+        }
     }
 
 }
